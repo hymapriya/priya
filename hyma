@@ -1,4 +1,11 @@
-properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/hymapriya/priya.git/'], pipelineTriggers([githubPush])])
+#!usr/bin/env groovy
+properties([
+  [$class: 'GithubProjectProperty', 
+  displayName: '', 
+  projectUrlStr: 'https://github.com/hymapriya/priya.git/'], 
+  pipelineTriggers([githubPush])
+  ])
+  
 pipeline {
     agent any
     stages {
